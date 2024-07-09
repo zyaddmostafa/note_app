@@ -15,7 +15,7 @@ class CustomSearchIcon extends StatelessWidget {
       child: Center(
         child: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.search,
             size: 27,
           ),
