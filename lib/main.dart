@@ -14,7 +14,9 @@ class NoteApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {Noteview.id: (context) => Noteview()},
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+          brightness: Brightness.dark,
+          fontFamily: 'assets/font/Poppins-Regular.ttf'),
       initialRoute: Noteview.id,
     );
   }
