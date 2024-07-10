@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:noteapp/widgets/customsearchicon.dart';
+import 'package:noteapp/widgets/customicon.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
