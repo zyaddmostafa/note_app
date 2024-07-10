@@ -8,10 +8,11 @@ import 'package:noteapp/simpleblocobserver.dart';
 import 'package:noteapp/views/noteview.dart';
 
 void main() async {
-  Bloc.observer = Simpleblocobserver();
   await Hive.initFlutter();
-  await Hive.openBox(knotebox);
+  Bloc.observer = Simpleblocobserver();
   Hive.registerAdapter(NotemodelAdapter());
+  await Hive.openBox<Notemodel>(knotebox);
+
   runApp(const NoteApp());
 }
 
@@ -30,9 +31,7 @@ class NoteApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {Noteview.id: (context) => const Noteview()},
-        theme: ThemeData(
-            brightness: Brightness.dark,
-            fontFamily: 'assets/font/Poppins-Regular.ttf'),
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
         initialRoute: Noteview.id,
       ),
     );
