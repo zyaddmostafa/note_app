@@ -52,7 +52,7 @@ class _AddnotebottomformState extends State<Addnotebottomform> {
             hint: 'Contetnt',
             maxline: 6,
             onsave: (value) {
-              title = value;
+              substitle = value;
             },
           ),
           const SizedBox(
