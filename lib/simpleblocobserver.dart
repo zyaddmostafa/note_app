@@ -9,12 +9,12 @@ class Simpleblocobserver implements BlocObserver {
 
   @override
   void onClose(BlocBase bloc) {
-    // TODO: implement onClose
+    debugPrint(' onclose = ${bloc}');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // TODO: implement onCreate
+    debugPrint(' onceate= ${bloc}');
   }
 
   @override
