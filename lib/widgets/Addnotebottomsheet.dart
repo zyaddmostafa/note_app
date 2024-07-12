@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noteapp/cubits/cubit/addnote_cubit.dart';
+import 'package:noteapp/cubits/cubit/cubit/notecubit_cubit.dart';
 import 'package:noteapp/widgets/addnotebottomform.dart';
 
 class Addnotebottomsheet extends StatelessWidget {
@@ -18,6 +19,7 @@ class Addnotebottomsheet extends StatelessWidget {
             print('failed ${state.message}');
           }
           if (state is AddnoteSuccses) {
+            BlocProvider.of<Notecubit>(context).fetchallnotes();
             Navigator.pop(context);
           }
         },

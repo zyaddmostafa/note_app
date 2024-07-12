@@ -6,6 +6,8 @@ import 'package:noteapp/model/noteviewmodel.dart';
 import 'package:noteapp/simpleblocobserver.dart';
 import 'package:noteapp/views/noteview.dart';
 
+import 'cubits/cubit/cubit/notecubit_cubit.dart';
+
 void main() async {
   await Hive.initFlutter();
   Bloc.observer = Simpleblocobserver();
@@ -21,11 +23,14 @@ class NoteApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {Noteview.id: (context) => const Noteview()},
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
-      initialRoute: Noteview.id,
+    return BlocProvider(
+      create: (context) => Notecubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: {Noteview.id: (context) => const Noteview()},
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+        initialRoute: Noteview.id,
+      ),
     );
   }
 }
