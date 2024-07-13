@@ -47,9 +47,12 @@ class _AddnotebottomformState extends State<Addnotebottomform> {
             },
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           const Colorlistview(),
+          const SizedBox(
+            height: 30,
+          ),
           BlocBuilder<AddnoteCubit, AddnoteState>(
             builder: (context, state) {
               return Custombuttom(
