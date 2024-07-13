@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:noteapp/cubits/cubit/addnote_cubit.dart';
 import 'package:noteapp/model/noteviewmodel.dart';
+import 'package:noteapp/widgets/colorlistview.dart';
 import 'package:noteapp/widgets/custombuttom.dart';
 import 'package:noteapp/widgets/customtextfield.dart';
 
@@ -48,6 +49,7 @@ class _AddnotebottomformState extends State<Addnotebottomform> {
           const SizedBox(
             height: 20,
           ),
+          const Colorlistview(),
           BlocBuilder<AddnoteCubit, AddnoteState>(
             builder: (context, state) {
               return Custombuttom(
