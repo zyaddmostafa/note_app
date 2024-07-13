@@ -58,7 +58,7 @@ class _AddnotebottomformState extends State<Addnotebottomform> {
                     var notemodel = Notemodel(
                         title: title!,
                         subtitle: subtitle!,
-                        data: DateFormat('dd-mm-yyyy').format(DateTime.now()),
+                        data: DateFormat.yMd().format(DateTime.now()),
                         color: Colors.blue.value);
                     BlocProvider.of<AddnoteCubit>(context).addnote(notemodel);
                   } else {
